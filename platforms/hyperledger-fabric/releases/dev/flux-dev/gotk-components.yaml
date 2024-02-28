@@ -44,7 +44,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Alert is the Schema for the alerts API
@@ -269,7 +269,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Bucket is the Schema for the buckets API
@@ -502,7 +502,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta2
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Bucket is the Schema for the buckets API.
@@ -787,7 +787,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: GitRepository is the Schema for the gitrepositories API
@@ -1117,7 +1117,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta2
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: GitRepository is the Schema for the gitrepositories API.
@@ -1543,7 +1543,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: HelmChart is the Schema for the helmcharts API
@@ -1798,7 +1798,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta2
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: HelmChart is the Schema for the helmcharts API.
@@ -2123,11 +2123,11 @@ spec:
             description: HelmReleaseSpec defines the desired state of a Helm release.
             properties:
               chart:
-                description: Chart defines the template of the v1beta2.HelmChart that
+                description: Chart defines the template of the v1beta3.HelmChart that
                   should be created for this HelmRelease.
                 properties:
                   spec:
-                    description: Spec holds the template for the v1beta2.HelmChartSpec
+                    description: Spec holds the template for the v1beta3.HelmChartSpec
                       for this HelmRelease.
                     properties:
                       chart:
@@ -2135,7 +2135,7 @@ spec:
                           at in the SourceRef.
                         type: string
                       interval:
-                        description: Interval at which to check the v1beta2.Source
+                        description: Interval at which to check the v1beta3.Source
                           for updates. Defaults to 'HelmReleaseSpec.Interval'.
                         pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m|h))+$
                         type: string
@@ -2150,7 +2150,7 @@ spec:
                         - Revision
                         type: string
                       sourceRef:
-                        description: The name and namespace of the v1beta2.Source
+                        description: The name and namespace of the v1beta3.Source
                           the chart is available at.
                         properties:
                           apiVersion:
@@ -2195,7 +2195,7 @@ spec:
                       version:
                         default: '*'
                         description: Version semver expression, ignored for charts
-                          from v1beta2.GitRepository and v1beta2.Bucket sources. Defaults
+                          from v1beta3.GitRepository and v1beta3.Bucket sources. Defaults
                           to latest when omitted.
                         type: string
                     required:
@@ -2966,7 +2966,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: HelmRepository is the Schema for the helmrepositories API
@@ -3184,7 +3184,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta2
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: HelmRepository is the Schema for the helmrepositories API.
@@ -3833,7 +3833,7 @@ spec:
     - jsonPath: .status.latestImage
       name: LatestImage
       type: string
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: ImagePolicy is the Schema for the imagepolicies API
@@ -4399,7 +4399,7 @@ spec:
     - jsonPath: .status.lastScanResult.tagCount
       name: Tags
       type: string
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: ImageRepository is the Schema for the imagerepositories API
@@ -5142,7 +5142,7 @@ spec:
     - jsonPath: .status.lastAutomationRunTime
       name: Last run
       type: string
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: ImageUpdateAutomation is the Schema for the imageupdateautomations
@@ -5461,7 +5461,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Kustomization is the Schema for the kustomizations API.
@@ -5998,7 +5998,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta2
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Kustomization is the Schema for the kustomizations API.
@@ -6408,7 +6408,7 @@ spec:
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m))+$
                 type: string
               validation:
-                description: 'Deprecated: Not used in v1beta2.'
+                description: 'Deprecated: Not used in v1beta3.'
                 enum:
                 - none
                 - client
@@ -6589,7 +6589,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta2
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: OCIRepository is the Schema for the ocirepositories API
@@ -6924,7 +6924,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Provider is the Schema for the providers API
@@ -7134,7 +7134,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       type: string
-    name: v1beta1
+    name: v1beta3
     schema:
       openAPIV3Schema:
         description: Receiver is the Schema for the receivers API
